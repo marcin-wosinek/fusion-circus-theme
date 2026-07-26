@@ -115,6 +115,30 @@ theme.json is now canonical for the exact numbers.
   (serif-in-buttons quirk), 2px violet focus outline. Button hover treatment
   deferred to the CSS/pattern stage.
 
+## Header (locked 2026-07-26)
+
+Built as `parts/header.html` → pattern `fusion-circus/header`, implementing the
+badge-split nav from Signature moves.
+
+- Row · Home · Events · Blog ‖ round badge ‖ Collaborations · Code of Conduct
+  (the five v1 mockup pages; badge also links home). Desktop: nav halves get
+  equal flex so the badge stays dead-centre despite the 3/2 split. Mobile
+  (<782 px): badge on top, link rows centred beneath — verified no horizontal
+  scroll at 320/375.
+- Band background · the `flood` gradient (its header-scrim allowance) on photo
+  and non-photo pages alike, so link contrast never depends on the imagery.
+- Logo asset · `assets/images/fusion-circus-badge-inverse.png` — the inverse
+  (dark-ground) round symbol, whitespace-trimmed, 360 px source. Display width
+  is the token `custom.size.badge` = clamp(4.5rem, 9vw, 6.5rem).
+- v1 contrast fix applied · white Jost `md` links with ≥44 px hit targets
+  (token `custom.size.tap` = 2.75rem), hover underline, `accent-ink`
+  focus-visible ring (tokens `custom.focus.width/offset`).
+- Nav URLs point at `/events/`, `/blog/`, `/collaborations/`,
+  `/code-of-conduct/` — those pages don't exist yet; create them as content
+  work proceeds.
+- `functions.php` now also loads `style.css` as editor style so the Site
+  Editor mirrors the hand-written header CSS.
+
 ## Exports
 
 `theme.json` (settings.color.palette, typography, spacing) is the source of

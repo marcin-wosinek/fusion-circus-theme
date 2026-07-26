@@ -8,3 +8,57 @@ Requires at least: 6.7
 Requires PHP: 7.4
 Text Domain: fusion-circus
 */
+
+/* ---------------------------------------------------------------------------
+ * Header — round badge splitting the nav row over the flood gradient band.
+ * Spec: design.md § Signature moves (locked 2026-07-26).
+ * ------------------------------------------------------------------------- */
+
+.fc-header .fc-header__badge img {
+	display: block;
+	width: var(--wp--custom--size--badge);
+	height: auto;
+}
+
+/* Contrast + hit-target fix carried over from the v1 audit (design.md § Notes):
+ * every nav link gets a ≥44px tap area on the scrim band. */
+.fc-header .wp-block-navigation-item__content {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--wp--custom--size--tap);
+	padding: var(--wp--preset--spacing--2-xs) var(--wp--preset--spacing--xs);
+}
+
+.fc-header .wp-block-navigation-item__content:hover {
+	text-decoration: underline;
+	text-underline-offset: var(--wp--preset--spacing--2-xs);
+}
+
+.fc-header a:focus-visible {
+	outline: var(--wp--custom--focus--width) solid var(--wp--preset--color--accent-ink);
+	outline-offset: var(--wp--custom--focus--offset);
+}
+
+/* Desktop: equal-flex nav halves keep the badge dead-centre even though the
+ * left cluster has 3 links and the right has 2. */
+@media (min-width: 782px) {
+	.fc-header .fc-header__nav {
+		flex: 1 1 0;
+	}
+}
+
+/* Mobile: badge on top, link clusters centred beneath it. */
+@media (max-width: 781.98px) {
+	.fc-header {
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--xs);
+	}
+
+	.fc-header .fc-header__badge {
+		order: -1;
+	}
+
+	.fc-header .fc-header__nav .wp-block-navigation__container {
+		justify-content: center;
+	}
+}

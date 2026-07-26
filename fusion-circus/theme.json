@@ -231,6 +231,14 @@
 				"pill": "999px",
 				"input": "999px"
 			},
+			"size": {
+				"badge": "clamp(4.5rem, 9vw, 6.5rem)",
+				"tap": "2.75rem"
+			},
+			"focus": {
+				"width": "2px",
+				"offset": "2px"
+			},
 			"ease": {
 				"out": "cubic-bezier(0.16, 1, 0.3, 1)"
 			},

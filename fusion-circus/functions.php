@@ -1,5 +1,9 @@
 <?php
 
+add_action( 'after_setup_theme', function () {
+	add_editor_style( 'style.css' );
+} );
+
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style(
 		'fusion-circus-style',
