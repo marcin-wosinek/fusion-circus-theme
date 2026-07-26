@@ -89,6 +89,32 @@ if the real faces differ. Rhythm read from a vision pass on the captures.
   restyle to meet contrast + 44px hit targets.
 - Italic never appears in headings; emphasis via weight or magenta.
 
+## Applied to theme.json (locked 2026-07-26)
+
+Tokens persisted as presets in `fusion-circus/theme.json`. OKLCH values were
+converted to sRGB hex (the Site Editor color UI needs concrete values);
+theme.json is now canonical for the exact numbers.
+
+- Palette slugs · `paper #eae4f7` · `paper-2 #ded6ef` · `card #fcfbff` ·
+  `ink #17141e` · `ink-2 #57535f` · `rule #cfcbd9` · `accent #d7068e` ·
+  `accent-2 #6b32c4` · `accent-ink #fcfcfc` · `scrim #330e3cbf` (75 % alpha).
+- Gradient preset `flood` (90°, violet→magenta) — header scrim + footer only.
+- Duotone preset `night-flood` (`#330e3c` → `#d7068e`) for photo scrims.
+- Fonts self-hosted in `assets/fonts/` (latin-subset variable woff2 from the
+  Google Fonts CDN, registered via `fontFace`): Playfair Display 400–900
+  roman (`display`), Jost 100–900 roman + italic (`body`). Candidates from
+  the Provenance section confirmed as the pick.
+- Type scale · `sm 0.875` → `5xl 4.77rem`, ratio ~1.25, fluid on `xl`+;
+  default palette/font-sizes/spacing disabled so the editor offers only ours.
+- Spacing scale · `2xs 0.25rem` → `3xl clamp(5rem,12vw,8rem)`; the three
+  clamp steps (`xl`–`3xl`) exist to vary section rhythm between bands.
+- Radii + motion under `settings.custom` → `--wp--custom--radius--card|pill|input`,
+  `--wp--custom--ease--out`, `--wp--custom--duration--fast|base`.
+- Default styles · body = Jost on `paper`; headings = Playfair 600 roman in
+  `accent`; links = `accent-2`; buttons = violet pill, Playfair label
+  (serif-in-buttons quirk), 2px violet focus outline. Button hover treatment
+  deferred to the CSS/pattern stage.
+
 ## Exports
 
 `theme.json` (settings.color.palette, typography, spacing) is the source of
