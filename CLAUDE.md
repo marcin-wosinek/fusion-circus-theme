@@ -219,6 +219,14 @@ the dump's values.
   depends on manual Site Editor tweaks.
 - The decision is recorded in `design.md` if it locks anything new.
 
+## Git attribution
+
+- **Do not** add a `Co-Authored-By: Claude …` trailer to commits.
+- **Do not** add "🤖 Generated with Claude Code" (or any equivalent attribution
+  line) to PR descriptions.
+- Commits are authored by the human running the session. No tool/agent
+  attribution belongs in the permanent history.
+
 ## References
 
 - Theme structure: <https://developer.wordpress.org/themes/block-themes/theme-structure/>
