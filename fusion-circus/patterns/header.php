@@ -17,7 +17,7 @@
 	<!-- /wp:navigation -->
 
 	<!-- wp:image {"sizeSlug":"full","linkDestination":"custom","className":"fc-header__badge"} -->
-	<figure class="wp-block-image size-full fc-header__badge"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php esc_attr_e( 'Fusion Circus — home', 'fusion-circus' ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/fusion-circus-badge-inverse.png' ) ); ?>" alt="<?php esc_attr_e( 'Fusion Circus', 'fusion-circus' ); ?>"/></a></figure>
+	<figure class="wp-block-image size-full fc-header__badge"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/fusion-circus-badge-inverse.png' ) ); ?>" alt="<?php esc_attr_e( 'Fusion Circus', 'fusion-circus' ); ?>"/></a></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:navigation {"overlayMenu":"never","textColor":"accent-ink","fontFamily":"body","fontSize":"md","className":"fc-header__nav fc-header__nav--right","ariaLabel":"<?php esc_attr_e( 'Secondary', 'fusion-circus' ); ?>","style":{"spacing":{"blockGap":"var:preset|spacing|sm"}},"layout":{"type":"flex","justifyContent":"left","flexWrap":"wrap"}} -->
