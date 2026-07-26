@@ -139,6 +139,24 @@ badge-split nav from Signature moves.
 - `functions.php` now also loads `style.css` as editor style so the Site
   Editor mirrors the hand-written header CSS.
 
+## Footer (locked 2026-07-26)
+
+Built as `parts/footer.html` → pattern `fusion-circus/footer`, implementing the
+Ft2 single-line footer over the flood band from Signature moves.
+
+- One centred line only: © year + site title, both dynamic (`date_i18n`,
+  `get_bloginfo`). No link columns, no socials, no invented address — Ft2 is
+  deliberately an afterthought line; anything more belongs to a future amend.
+- Band · the `flood` gradient (its footer allowance) with `md` padding.
+  Text is `accent-ink` Jost `sm`; contrast at the gradient's magenta end
+  ≈ 4.75:1 — passes AA for small text.
+- Sticky footer · `.wp-site-blocks` becomes a flex column at `min-height:
+  100svh` with `main` growing, so on short pages (404, Code of Conduct) the
+  band meets the viewport bottom instead of floating above bare paper.
+- By filename, `parts/footer.html` overrides the parent Twenty Twenty-Five
+  footer sitewide. Verified desktop / 375 / 320 (emulated): no horizontal
+  scroll, single line throughout.
+
 ## Exports
 
 `theme.json` (settings.color.palette, typography, spacing) is the source of

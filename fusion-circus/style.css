@@ -39,6 +39,22 @@ Text Domain: fusion-circus
 	outline-offset: var(--wp--custom--focus--offset);
 }
 
+/* ---------------------------------------------------------------------------
+ * Footer — single copyright line over the flood band (design.md Ft2).
+ * Sticky-footer: on short pages (404, Code of Conduct) the band must still
+ * meet the bottom of the viewport instead of floating above bare paper.
+ * ------------------------------------------------------------------------- */
+
+.wp-site-blocks {
+	display: flex;
+	flex-direction: column;
+	min-height: 100svh;
+}
+
+.wp-site-blocks > main {
+	flex-grow: 1;
+}
+
 /* Desktop: equal-flex nav halves keep the badge dead-centre even though the
  * left cluster has 3 links and the right has 2. */
 @media (min-width: 782px) {
