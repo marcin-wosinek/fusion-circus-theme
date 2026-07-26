@@ -49,6 +49,11 @@
 					"color": "#6b32c4"
 				},
 				{
+					"slug": "accent-2-deep",
+					"name": "Accent 2 deep (violet hover)",
+					"color": "#5722a3"
+				},
+				{
 					"slug": "accent-ink",
 					"name": "Accent ink (on fills)",
 					"color": "#fcfcfc"
@@ -239,6 +244,10 @@
 				"width": "2px",
 				"offset": "2px"
 			},
+			"border": {
+				"width": "2px"
+			},
+			"press": "1px",
 			"ease": {
 				"out": "cubic-bezier(0.16, 1, 0.3, 1)"
 			},
@@ -295,11 +304,16 @@
 				"border": {
 					"radius": "var(--wp--custom--radius--pill)"
 				},
-				":focus": {
-					"outline": {
-						"color": "var:preset|color|accent-2",
-						"style": "solid",
-						"width": "2px"
+				":hover": {
+					"color": {
+						"background": "var:preset|color|accent-2-deep",
+						"text": "var:preset|color|accent-ink"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var:preset|color|accent-2-deep",
+						"text": "var:preset|color|accent-ink"
 					}
 				}
 			}

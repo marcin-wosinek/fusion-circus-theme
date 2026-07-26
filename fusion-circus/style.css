@@ -55,6 +55,78 @@ Text Domain: fusion-circus
 	flex-grow: 1;
 }
 
+/* ---------------------------------------------------------------------------
+ * Buttons — CTA voice (design.md § CTA voice, locked 2026-07-26).
+ * Hallmark · component: core/button + 2 block styles · genre: atmospheric ·
+ * theme: studied-DNA · states: default · hover · focus-visible · active
+ * (core/button renders a plain link — no disabled/loading/error/success
+ * semantics exist for it) · contrast: pass (5.88:1 worst, ghost on paper)
+ *
+ * Default (Fill) = primary CTA: violet pill, Playfair label; hover/active
+ * colors come from theme.json (accent-2-deep). This file adds shape, motion
+ * and the two alternates: "On photo (white)" and "Ghost (outline)".
+ * ------------------------------------------------------------------------- */
+
+.wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: var(--wp--custom--size--tap);
+	padding: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--md);
+	transition:
+		background-color var(--wp--custom--duration--fast) var(--wp--custom--ease--out),
+		color var(--wp--custom--duration--fast) var(--wp--custom--ease--out),
+		border-color var(--wp--custom--duration--fast) var(--wp--custom--ease--out);
+}
+
+/* Tactile press — instant (no transition), transform-only. */
+.wp-block-button__link:active {
+	transform: translateY(var(--wp--custom--press));
+}
+
+.wp-block-button__link:focus-visible {
+	outline: var(--wp--custom--focus--width) solid var(--wp--preset--color--accent-2);
+	outline-offset: var(--wp--custom--focus--offset);
+}
+
+/* Alternate 1 · On photo (white) — the locked secondary CTA for busy imagery:
+ * card fill, ink text, lavender hover, white focus ring (violet would vanish
+ * against dark scrims). */
+.wp-block-button.is-style-on-photo .wp-block-button__link {
+	background-color: var(--wp--preset--color--card);
+	color: var(--wp--preset--color--ink);
+}
+
+.wp-block-button.is-style-on-photo .wp-block-button__link:hover,
+.wp-block-button.is-style-on-photo .wp-block-button__link:active {
+	background-color: var(--wp--preset--color--paper-2);
+	color: var(--wp--preset--color--ink);
+}
+
+.wp-block-button.is-style-on-photo .wp-block-button__link:focus-visible {
+	outline-color: var(--wp--preset--color--accent-ink);
+}
+
+/* Alternate 2 · Ghost (outline) — quieter sibling for paper/card grounds
+ * only (not photos); fills violet on hover. */
+.wp-block-button.is-style-ghost .wp-block-button__link {
+	background-color: transparent;
+	color: var(--wp--preset--color--accent-2);
+	border: var(--wp--custom--border--width) solid var(--wp--preset--color--accent-2);
+}
+
+.wp-block-button.is-style-ghost .wp-block-button__link:hover,
+.wp-block-button.is-style-ghost .wp-block-button__link:active {
+	background-color: var(--wp--preset--color--accent-2);
+	color: var(--wp--preset--color--accent-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-button__link {
+		transition-duration: 1ms;
+	}
+}
+
 /* Desktop: equal-flex nav halves keep the badge dead-centre even though the
  * left cluster has 3 links and the right has 2. */
 @media (min-width: 782px) {
