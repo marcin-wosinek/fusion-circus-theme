@@ -12,12 +12,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Zip theme
-        run: zip -r fusion-circus.zip fusion-circus -x '.DS_Store'
+      - name: Stage theme
+        run: |
+          mkdir -p dist/fusion-circus
+          cp -r fusion-circus/. dist/fusion-circus/
+          find dist -name '.DS_Store' -delete
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: fusion-circus
-          path: fusion-circus.zip
+          path: dist
           retention-days: 90
