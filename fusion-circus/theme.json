@@ -267,22 +267,22 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var:preset|font-size|5xl"
+					"fontSize": "var(--wp--preset--font-size--5-xl)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var:preset|font-size|4xl"
+					"fontSize": "var(--wp--preset--font-size--4-xl)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var:preset|font-size|3xl"
+					"fontSize": "var(--wp--preset--font-size--3-xl)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var:preset|font-size|2xl"
+					"fontSize": "var(--wp--preset--font-size--2-xl)"
 				}
 			},
 			"h5": {
