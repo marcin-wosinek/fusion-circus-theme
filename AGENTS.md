@@ -90,14 +90,14 @@ Prerequisites: Node.js LTS, Docker Desktop.
 
 | Command | What it does |
 |---|---|
-| `npx wp-env start` | Start (first run is slow) |
-| `npx wp-env stop` | Stop containers, keep data |
-| `npx wp-env clean all` | **Reset the database** (see gotchas — you'll want this) |
-| `npx wp-env destroy` | Remove everything including volumes |
-| `npx wp-env run cli wp <cmd>` | Any WP-CLI command inside the container |
+| `npx @wordpress/env start` | Start (first run is slow) |
+| `npx @wordpress/env stop` | Stop containers, keep data |
+| `npx @wordpress/env clean all` | **Reset the database** (see gotchas — you'll want this) |
+| `npx @wordpress/env destroy` | Remove everything including volumes |
+| `npx @wordpress/env run cli wp <cmd>` | Any WP-CLI command inside the container |
 
 - Dev site: <http://localhost:9789> — login `admin` / `password`
-- If the theme isn't active: `npx wp-env run cli wp theme activate <slug>`
+- If the theme isn't active: `npx @wordpress/env run cli wp theme activate <slug>`
 
 Theme files are mounted live — edit locally, reload the browser. Keep the
 project build-step-free unless custom JS becomes unavoidable.
@@ -173,8 +173,8 @@ gitignored, local-only, never committed.
 ```bash
 # Database
 mkdir -p import/db && cp ~/Downloads/<export>.sql import/db/
-npx wp-env run cli wp db reset --yes        # ALWAYS reset first
-npx wp-env run cli wp db import wp-content/import/<export>.sql
+npx @wordpress/env run cli wp db reset --yes        # ALWAYS reset first
+npx @wordpress/env run cli wp db import wp-content/import/<export>.sql
 
 # Uploads — check archive structure first: years (2026/ etc.) must land
 # directly under import/uploads/
@@ -182,7 +182,7 @@ unzip -l ~/Downloads/uploads.zip | head
 mkdir -p import/uploads && unzip -o ~/Downloads/uploads.zip -d import/uploads
 
 # Verify
-npx wp-env run cli wp post list --post_type=post --fields=ID,post_title,post_date
+npx @wordpress/env run cli wp post list --post_type=post --fields=ID,post_title,post_date
 ```
 
 Skipping `wp db reset` leaves the fresh install's `ID = 1` default rows
@@ -196,7 +196,7 @@ the dump's values.
    parent `theme.json` → child `theme.json` → **Site Editor changes saved in
    the DB**. Anything ever styled through the Site Editor UI silently wins
    over later file edits. Use the Site Editor to preview, but persist every
-   decision into `theme.json`/files, then reset (`npx wp-env clean all` or
+   decision into `theme.json`/files, then reset (`npx @wordpress/env clean all` or
    Styles → revisions).
 2. **Selected style variations are stored in the DB too** — editing the JSON
    won't update a site that already picked it; re-select or reset.
@@ -219,7 +219,7 @@ the dump's values.
 - Site Editor reflects it (tokens visible in Styles UI, patterns in the
   inserter).
 - Zero raw colors/sizes introduced; everything traces to a preset.
-- Works on a fresh DB (`npx wp-env clean all`, re-check) — proves nothing
+- Works on a fresh DB (`npx @wordpress/env clean all`, re-check) — proves nothing
   depends on manual Site Editor tweaks.
 - The decision is recorded in `design.md` if it locks anything new.
 
