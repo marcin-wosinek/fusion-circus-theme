@@ -60,10 +60,10 @@ Text Domain: fusion-circus
  * Hallmark · component: core/button + 2 block styles · genre: atmospheric ·
  * theme: studied-DNA · states: default · hover · focus-visible · active
  * (core/button renders a plain link — no disabled/loading/error/success
- * semantics exist for it) · contrast: pass (5.88:1 worst, ghost on paper)
+ * semantics exist for it) · contrast: pass (4.75:1 worst, fill label)
  *
- * Default (Fill) = primary CTA: violet pill, Playfair label; hover/active
- * colors come from theme.json (accent-2-deep). This file adds shape, motion
+ * Default (Fill) = primary CTA: magenta pill, Jost label; hover/active
+ * colors come from theme.json. This file adds shape, motion
  * and the two alternates: "On photo (white)" and "Ghost (outline)".
  * ------------------------------------------------------------------------- */
 
@@ -85,7 +85,7 @@ Text Domain: fusion-circus
 }
 
 .wp-block-button__link:focus-visible {
-	outline: var(--wp--custom--focus--width) solid var(--wp--preset--color--accent-2);
+	outline: var(--wp--custom--focus--width) solid var(--wp--preset--color--accent);
 	outline-offset: var(--wp--custom--focus--offset);
 }
 
@@ -108,16 +108,16 @@ Text Domain: fusion-circus
 }
 
 /* Alternate 2 · Ghost (outline) — quieter sibling for paper/card grounds
- * only (not photos); fills violet on hover. */
+ * only (not photos); fills magenta on hover. */
 .wp-block-button.is-style-ghost .wp-block-button__link {
 	background-color: transparent;
-	color: var(--wp--preset--color--accent-2);
-	border: var(--wp--custom--border--width) solid var(--wp--preset--color--accent-2);
+	color: var(--wp--preset--color--accent-deep);
+	border: var(--wp--custom--border--width) solid var(--wp--preset--color--accent-deep);
 }
 
 .wp-block-button.is-style-ghost .wp-block-button__link:hover,
 .wp-block-button.is-style-ghost .wp-block-button__link:active {
-	background-color: var(--wp--preset--color--accent-2);
+	background-color: var(--wp--preset--color--accent-deep);
 	color: var(--wp--preset--color--accent-ink);
 }
 

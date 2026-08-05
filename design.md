@@ -65,12 +65,13 @@ if the real faces differ. Rhythm read from a vision pass on the captures.
 
 ## CTA voice
 
-- Primary · violet fill (`--color-accent-2`) · pill radius · display-serif label
-  (serif-in-buttons is a deliberate brand quirk — keep it).
+- Primary (amended 2026-08-05) · magenta fill (`--color-accent`) · pill radius ·
+  sans-serif Jost label. Buttons now use the body sans-serif for clearer,
+  friendlier action labels; the former serif-button quirk is retired.
 - Secondary (on photos) · white fill, ink text, pill — must meet contrast on
   busy imagery (see Notes).
-- Tertiary (added 2026-07-26) · "Ghost" — violet 2px outline pill, transparent
-  fill, violet label; fills violet on hover. Paper/card grounds only, never on
+- Tertiary (amended 2026-08-05) · "Ghost" — magenta 2px outline pill, transparent
+  fill, magenta label; fills magenta on hover. Paper/card grounds only, never on
   photos (outline contrast can't be guaranteed on imagery).
 
 ## Motion stance
@@ -101,6 +102,8 @@ theme.json is now canonical for the exact numbers.
 
 - Palette slugs · `paper #eae4f7` · `paper-2 #ded6ef` · `card #fcfbff` ·
   `ink #17141e` · `ink-2 #57535f` · `rule #cfcbd9` · `accent #d7068e` ·
+  `accent-deep #b80076` (magenta hover and outlined-button text, added
+  2026-08-05) ·
   `accent-2 #6b32c4` · `accent-2-deep #5722a3` (oklch 41% 0.19 295 — button
   hover, added 2026-07-26) · `accent-ink #fcfcfc` · `scrim #330e3cbf`
   (75 % alpha).
@@ -125,8 +128,8 @@ theme.json is now canonical for the exact numbers.
   `--wp--custom--ease--out`, `--wp--custom--duration--fast|base`.
 - Default styles · body = Jost on `paper`; headings = Playfair 600 roman in
   `accent-2` (`#6b32c4`, RGB 107 50 196; relocked 2026-08-05); links =
-  `accent-2`; buttons = violet pill, Playfair label
-  (serif-in-buttons quirk). Button states locked 2026-07-26 — see § Buttons.
+  `accent-2`; buttons = magenta pill, Jost label (amended 2026-08-05).
+  Button states locked 2026-07-26 — see § Buttons.
 
 ## Header (locked 2026-07-26)
 
@@ -176,16 +179,14 @@ Core/button styled per § CTA voice: the default (Fill) is the primary CTA;
 two block styles registered in `functions.php` are the alternates, styled in
 `style.css` (which `add_editor_style` mirrors into the editor).
 
-- Default (Fill) · violet pill, Playfair 500 label. Hover/active background =
-  `accent-2-deep` (via theme.json `elements.button` pseudo-styles); active
-  additionally presses down 1px (transform-only, no transition). The formerly
-  deferred hover treatment is now locked: darken, don't lift — no shadows,
-  no magenta (accent discipline).
+- Default (Fill; amended 2026-08-05) · magenta pill, Jost 500 label.
+  Hover/active darken to `accent-deep`; active additionally presses down 1px
+  (transform-only, no transition). No shadows or lift.
 - `is-style-on-photo` · "On photo (white)" — the locked secondary CTA: `card`
   fill, `ink` text, `paper-2` hover, **`accent-ink` focus ring** (violet would
   vanish against dark scrims).
-- `is-style-ghost` · "Ghost (outline)" — tertiary: 2px `accent-2` outline
-  (token `custom.border.width`), transparent fill, fills violet on hover.
+- `is-style-ghost` · "Ghost (outline)" — tertiary: 2px `accent-deep` outline
+  (token `custom.border.width`), transparent fill, fills deep magenta on hover.
   Paper/card grounds only.
 - Focus moved from theme.json `:focus` to CSS `:focus-visible` (2px `accent-2`
   ring, offset — the old no-offset ring was invisible against the violet fill),
@@ -193,8 +194,9 @@ two block styles registered in `functions.php` are the alternates, styled in
 - Shape · `min-height` = `custom.size.tap` (44px hit target), `xs`/`md`
   padding, inline-flex centring; color transitions at `duration.fast` /
   `ease.out`, reduced-motion collapses them.
-- Contrast (WCAG) · label on fill 7.11:1 · on hover 9.46:1 · ink on card
-  17.6:1 · ghost violet on paper 5.88:1 — all AA+.
+- Contrast (WCAG; amended 2026-08-05) · label on magenta fill 4.75:1 · on
+  deep-magenta hover 6.20:1 · ink on card 17.6:1 · deep-magenta ghost on
+  paper 5.13:1 — all AA+.
 - core/button renders a plain link — disabled/loading/error/success states
   don't exist for it; only default/hover/focus-visible/active are styled.
 - Verified · desktop + emulated 375: single-line labels, 44–46px heights, no

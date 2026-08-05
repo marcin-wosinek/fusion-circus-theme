@@ -44,6 +44,11 @@
 					"color": "#d7068e"
 				},
 				{
+					"slug": "accent-deep",
+					"name": "Accent deep (magenta hover)",
+					"color": "#b80076"
+				},
+				{
 					"slug": "accent-2",
 					"name": "Accent 2 (violet)",
 					"color": "#6b32c4"
@@ -307,11 +312,11 @@
 			},
 			"button": {
 				"color": {
-					"background": "var:preset|color|accent-2",
+					"background": "var:preset|color|accent",
 					"text": "var:preset|color|accent-ink"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|display",
+					"fontFamily": "var:preset|font-family|body",
 					"fontSize": "var:preset|font-size|md",
 					"fontStyle": "normal",
 					"fontWeight": "500"
@@ -321,13 +326,13 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var:preset|color|accent-2-deep",
+						"background": "var:preset|color|accent-deep",
 						"text": "var:preset|color|accent-ink"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var:preset|color|accent-2-deep",
+						"background": "var:preset|color|accent-deep",
 						"text": "var:preset|color|accent-ink"
 					}
 				}
