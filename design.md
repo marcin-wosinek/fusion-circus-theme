@@ -109,12 +109,14 @@ theme.json is now canonical for the exact numbers.
   Google Fonts CDN, registered via `fontFace`): Playfair Display 400–900
   roman (`display`), Jost 100–900 roman + italic (`body`). Candidates from
   the Provenance section confirmed as the pick.
-- Type scale · `sm 0.875` → `5xl 4.77rem`, ratio ~1.25, fluid on `xl`+;
-  default palette/font-sizes/spacing disabled so the editor offers only ours.
-- Heading hierarchy (locked 2026-08-05) · H1 `5xl` → H2 `4xl` → H3 `3xl`
-  → H4 `2xl` → H5 `xl` → H6 `lg`; body remains `md`. Every heading level is
-  therefore smaller than the preceding level, while H6 stays 1.25× larger
-  than body copy.
+- Type scale · `sm 0.875rem` → `5xl 2.5rem`; default palette/font-sizes/
+  spacing disabled so the editor offers only ours.
+- Heading hierarchy (relocked 2026-08-05) · H1 `5xl` (2.5rem) → H2 `4xl`
+  (2.125rem) → H3 `3xl` (1.75rem) → H4 `2xl` (1.5rem) → H5 `xl`
+  (1.25rem) → H6 `lg` (1.125rem); body remains `md` (1rem). H1 is exactly
+  2.5× body copy and H6 is deliberately only 12.5% larger. Fixed sizes keep
+  the hierarchy consistent across viewport widths; the restrained H1 remains
+  safe at 320px without fluid compression.
 - Spacing scale · `2xs 0.25rem` → `3xl clamp(5rem,12vw,8rem)`; the three
   clamp steps (`xl`–`3xl`) exist to vary section rhythm between bands.
 - Radii + motion under `settings.custom` → `--wp--custom--radius--card|pill|input`,

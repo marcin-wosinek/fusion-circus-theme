@@ -135,53 +135,38 @@
 				{
 					"slug": "lg",
 					"name": "Large",
-					"size": "1.25rem",
+					"size": "1.125rem",
 					"fluid": false
 				},
 				{
 					"slug": "xl",
 					"name": "Extra large",
-					"size": "1.5625rem",
-					"fluid": {
-						"min": "1.375rem",
-						"max": "1.5625rem"
-					}
+					"size": "1.25rem",
+					"fluid": false
 				},
 				{
 					"slug": "2xl",
 					"name": "2X large",
-					"size": "1.9531rem",
-					"fluid": {
-						"min": "1.625rem",
-						"max": "1.9531rem"
-					}
+					"size": "1.5rem",
+					"fluid": false
 				},
 				{
 					"slug": "3xl",
 					"name": "3X large",
-					"size": "2.4414rem",
-					"fluid": {
-						"min": "1.9531rem",
-						"max": "2.4414rem"
-					}
+					"size": "1.75rem",
+					"fluid": false
 				},
 				{
 					"slug": "4xl",
 					"name": "4X large",
-					"size": "3.0518rem",
-					"fluid": {
-						"min": "2.25rem",
-						"max": "3.0518rem"
-					}
+					"size": "2.125rem",
+					"fluid": false
 				},
 				{
 					"slug": "5xl",
-					"name": "5X large (display)",
-					"size": "4.7684rem",
-					"fluid": {
-						"min": "3rem",
-						"max": "4.7684rem"
-					}
+					"name": "5X large",
+					"size": "2.5rem",
+					"fluid": false
 				}
 			]
 		},
