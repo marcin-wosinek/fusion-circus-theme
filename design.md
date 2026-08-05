@@ -203,3 +203,14 @@ two block styles registered in `functions.php` are the alternates, styled in
 truth in this repo. Hand-written CSS references presets only
 (`var(--wp--preset--…)`). For a standalone `tokens.css`, Tailwind `@theme`, or
 DTCG `tokens.json`, ask to extend design.md with that export.
+
+## Fair event template (locked 2026-08-05)
+
+- `templates/single-fair_event.html` targets the `fair_event` post type and
+  delegates its body layout to `fusion-circus/single-fair-event`.
+- Event entries show the title, featured image, content, tags, and comments.
+  Author attribution, the parent theme's "More posts" section, and previous /
+  next post navigation are intentionally absent: an event page should remain
+  focused on the event rather than exposing editorial-blog metadata or exits.
+- Spacing uses the locked `lg` and `xl` presets; the template introduces no new
+  visual tokens or CSS.
