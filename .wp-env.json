@@ -1,6 +1,8 @@
 {
 	"core": null,
 	"themes": ["./fusion-circus"],
+	"port": 9789,
+	"testsEnvironment": false,
 	"config": {
 		"WP_DEBUG": true,
 		"SCRIPT_DEBUG": true,

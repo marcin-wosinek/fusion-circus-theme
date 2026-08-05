@@ -96,8 +96,7 @@ Prerequisites: Node.js LTS, Docker Desktop.
 | `npx wp-env destroy` | Remove everything including volumes |
 | `npx wp-env run cli wp <cmd>` | Any WP-CLI command inside the container |
 
-- Dev site: <http://localhost:8888> — login `admin` / `password`
-- Test site: <http://localhost:8889> (automated tests only, ignore)
+- Dev site: <http://localhost:9789> — login `admin` / `password`
 - If the theme isn't active: `npx wp-env run cli wp theme activate <slug>`
 
 Theme files are mounted live — edit locally, reload the browser. Keep the
