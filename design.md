@@ -81,8 +81,9 @@ if the real faces differ. Rhythm read from a vision pass on the captures.
 
 ## Notes — anti-patterns from v1 NOT to carry over (locked 2026-07-26)
 
-- **Accent discipline, formalised:** magenta = headings/identity, violet =
-  interactive. Never swap; gradient floods capped at header scrim + footer.
+- **Accent discipline, amended 2026-08-05:** violet = headings and interactive
+  elements; magenta remains an identity accent. Gradient floods stay capped at
+  the header scrim + footer.
 - **Left-align long prose.** v1 centres multi-paragraph text (event "About",
   blog posts) — headings stay centred, body copy goes left-aligned.
 - **Vary section rhythm.** v1 pads every section equally, which reads
@@ -123,7 +124,8 @@ theme.json is now canonical for the exact numbers.
 - Radii + motion under `settings.custom` → `--wp--custom--radius--card|pill|input`,
   `--wp--custom--ease--out`, `--wp--custom--duration--fast|base`.
 - Default styles · body = Jost on `paper`; headings = Playfair 600 roman in
-  `accent`; links = `accent-2`; buttons = violet pill, Playfair label
+  `accent-2` (`#6b32c4`, RGB 107 50 196; relocked 2026-08-05); links =
+  `accent-2`; buttons = violet pill, Playfair label
   (serif-in-buttons quirk). Button states locked 2026-07-26 — see § Buttons.
 
 ## Header (locked 2026-07-26)
