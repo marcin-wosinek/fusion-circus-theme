@@ -280,6 +280,36 @@
 					"lineHeight": "1.15"
 				}
 			},
+			"h1": {
+				"typography": {
+					"fontSize": "var:preset|font-size|5xl"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var:preset|font-size|4xl"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var:preset|font-size|3xl"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "var:preset|font-size|2xl"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "var:preset|font-size|xl"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "var:preset|font-size|lg"
+				}
+			},
 			"link": {
 				"color": {
 					"text": "var:preset|color|accent-2"

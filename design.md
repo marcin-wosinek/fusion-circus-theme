@@ -111,6 +111,10 @@ theme.json is now canonical for the exact numbers.
   the Provenance section confirmed as the pick.
 - Type scale · `sm 0.875` → `5xl 4.77rem`, ratio ~1.25, fluid on `xl`+;
   default palette/font-sizes/spacing disabled so the editor offers only ours.
+- Heading hierarchy (locked 2026-08-05) · H1 `5xl` → H2 `4xl` → H3 `3xl`
+  → H4 `2xl` → H5 `xl` → H6 `lg`; body remains `md`. Every heading level is
+  therefore smaller than the preceding level, while H6 stays 1.25× larger
+  than body copy.
 - Spacing scale · `2xs 0.25rem` → `3xl clamp(5rem,12vw,8rem)`; the three
   clamp steps (`xl`–`3xl`) exist to vary section rhythm between bands.
 - Radii + motion under `settings.custom` → `--wp--custom--radius--card|pill|input`,
