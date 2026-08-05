@@ -109,14 +109,15 @@ theme.json is now canonical for the exact numbers.
   Google Fonts CDN, registered via `fontFace`): Playfair Display 400–900
   roman (`display`), Jost 100–900 roman + italic (`body`). Candidates from
   the Provenance section confirmed as the pick.
-- Type scale · `sm 0.875rem` → `5xl 2.5rem`; default palette/font-sizes/
+- Type scale · `sm 0.875rem` → `5xl 3rem`; default palette/font-sizes/
   spacing disabled so the editor offers only ours.
-- Heading hierarchy (relocked 2026-08-05) · H1 `5xl` (2.5rem) → H2 `4xl`
-  (2.125rem) → H3 `3xl` (1.75rem) → H4 `2xl` (1.5rem) → H5 `xl`
+- Heading hierarchy (relocked 2026-08-05) · H1 `5xl` (3rem) → H2 `4xl`
+  (2.25rem) → H3 `3xl` (1.75rem) → H4 `2xl` (1.5rem) → H5 `xl`
   (1.25rem) → H6 `lg` (1.125rem); body remains `md` (1rem). H1 is exactly
-  2.5× body copy and H6 is deliberately only 12.5% larger. Fixed sizes keep
-  the hierarchy consistent across viewport widths; the restrained H1 remains
-  safe at 320px without fluid compression.
+  3× body copy, H2 sits at three quarters of H1, and the lower levels descend
+  in restrained steps to keep H6 distinct without competing with body copy.
+  Fixed sizes keep the hierarchy consistent across viewport widths; long H1
+  copy must still be checked at 320px as part of normal page-level QA.
 - Spacing scale · `2xs 0.25rem` → `3xl clamp(5rem,12vw,8rem)`; the three
   clamp steps (`xl`–`3xl`) exist to vary section rhythm between bands.
 - Radii + motion under `settings.custom` → `--wp--custom--radius--card|pill|input`,

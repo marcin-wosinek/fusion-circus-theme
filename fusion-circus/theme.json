@@ -159,13 +159,13 @@
 				{
 					"slug": "4xl",
 					"name": "4X large",
-					"size": "2.125rem",
+					"size": "2.25rem",
 					"fluid": false
 				},
 				{
 					"slug": "5xl",
 					"name": "5X large",
-					"size": "2.5rem",
+					"size": "3rem",
 					"fluid": false
 				}
 			]
