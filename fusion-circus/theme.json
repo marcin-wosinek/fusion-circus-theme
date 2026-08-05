@@ -264,7 +264,7 @@
 					"text": "var:preset|color|accent-2"
 				},
 				"typography": {
-					"fontFamily": "var:preset|font-family|display",
+					"fontFamily": "var:preset|font-family|body",
 					"fontStyle": "normal",
 					"fontWeight": "600",
 					"lineHeight": "1.15"
@@ -272,6 +272,7 @@
 			},
 			"h1": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|display",
 					"fontSize": "var(--wp--preset--font-size--5-xl)"
 				}
 			},

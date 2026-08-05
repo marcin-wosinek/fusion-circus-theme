@@ -59,7 +59,7 @@ if the real faces differ. Rhythm read from a vision pass on the captures.
 - **Floating white cards** (24px radius, soft shadow) overlapping section edges.
 - **Circular badge motif** — round logo splitting the nav link row (3 left ·
   2 right, transparent over photo header); round date stamps on blog cards.
-- Section heads: centred magenta serif heading hanging in negative space, short
+- Section heads: centred magenta Jost heading hanging in negative space, short
   centred intro line beneath. No eyebrows, no numbering, no rules.
 - Footer: single copyright line over the gradient flood band (Ft2).
 
@@ -122,13 +122,18 @@ theme.json is now canonical for the exact numbers.
   in restrained steps to keep H6 distinct without competing with body copy.
   Fixed sizes keep the hierarchy consistent across viewport widths; long H1
   copy must still be checked at 320px as part of normal page-level QA.
+- Heading families (amended 2026-08-05) · H1 alone uses Playfair Display 600;
+  H2–H6 use Jost 600. This reserves the editorial display voice for the page
+  title while giving section and sub-section headings a clearer sans-serif
+  hierarchy consistent with body copy and controls.
 - Spacing scale · `2xs 0.25rem` → `3xl clamp(5rem,12vw,8rem)`; the three
   clamp steps (`xl`–`3xl`) exist to vary section rhythm between bands.
 - Radii + motion under `settings.custom` → `--wp--custom--radius--card|pill|input`,
   `--wp--custom--ease--out`, `--wp--custom--duration--fast|base`.
-- Default styles · body = Jost on `paper`; headings = Playfair 600 roman in
-  `accent-2` (`#6b32c4`, RGB 107 50 196; relocked 2026-08-05); links =
-  `accent-2`; buttons = magenta pill, Jost label (amended 2026-08-05).
+- Default styles · body = Jost on `paper`; H1 = Playfair 600 roman and H2–H6 =
+  Jost 600 roman, all in `accent-2` (`#6b32c4`, RGB 107 50 196; heading-family
+  split amended 2026-08-05); links = `accent-2`; buttons = magenta pill, Jost
+  label (amended 2026-08-05).
   Button states locked 2026-07-26 — see § Buttons.
 
 ## Header (locked 2026-07-26)
