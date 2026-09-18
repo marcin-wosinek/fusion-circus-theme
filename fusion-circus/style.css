@@ -40,7 +40,7 @@ Text Domain: fusion-circus
 }
 
 /* ---------------------------------------------------------------------------
- * Footer — single copyright line over the flood band (design.md Ft2).
+ * Footer — policy links and copyright over the flood band (design.md).
  * Sticky-footer: on short pages (404, Code of Conduct) the band must still
  * meet the bottom of the viewport instead of floating above bare paper.
  * ------------------------------------------------------------------------- */
@@ -53,6 +53,22 @@ Text Domain: fusion-circus
 
 .wp-site-blocks > main {
 	flex-grow: 1;
+}
+
+.fc-footer .wp-block-navigation-item__content {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--wp--custom--size--tap);
+}
+
+.fc-footer .wp-block-navigation-item__content:hover {
+	text-decoration: underline;
+	text-underline-offset: var(--wp--preset--spacing--2-xs);
+}
+
+.fc-footer a:focus-visible {
+	outline: var(--wp--custom--focus--width) solid var(--wp--preset--color--accent-ink);
+	outline-offset: var(--wp--custom--focus--offset);
 }
 
 /* ---------------------------------------------------------------------------

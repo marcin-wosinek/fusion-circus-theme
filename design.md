@@ -141,9 +141,9 @@ theme.json is now canonical for the exact numbers.
 Built as `parts/header.html` → pattern `fusion-circus/header`, implementing the
 badge-split nav from Signature moves.
 
-- Row · Home · Events · Blog ‖ round badge ‖ Collaborations · Code of Conduct
-  (the five v1 mockup pages; badge also links home). Desktop: nav halves get
-  equal flex so the badge stays dead-centre despite the 3/2 split. Mobile
+- Row · Home · Events · Blog ‖ round badge ‖ Collaborations
+  (badge also links home). Desktop: nav halves get
+  equal flex so the badge stays dead-centre. Mobile
   (<782 px): badge on top, link rows centred beneath — verified no horizontal
   scroll at 320/375.
 - Band background · the `flood` gradient (its header-scrim allowance) on photo
@@ -154,8 +154,7 @@ badge-split nav from Signature moves.
 - v1 contrast fix applied · white Jost `md` links with ≥44 px hit targets
   (token `custom.size.tap` = 2.75rem), hover underline, `accent-ink`
   focus-visible ring (tokens `custom.focus.width/offset`).
-- Nav URLs point at `/events/`, `/blog/`, `/collaborations/`,
-  `/code-of-conduct/` — those pages don't exist yet; create them as content
+- Nav URLs point at `/events/`, `/blog/`, `/collaborations/` — those pages don't exist yet; create them as content
   work proceeds.
 - `functions.php` now also loads `style.css` as editor style so the Site
   Editor mirrors the hand-written header CSS.
@@ -163,11 +162,11 @@ badge-split nav from Signature moves.
 ## Footer (locked 2026-07-26)
 
 Built as `parts/footer.html` → pattern `fusion-circus/footer`, implementing the
-Ft2 single-line footer over the flood band from Signature moves.
+flood band from Signature moves.
 
-- One centred line only: © year + site title, both dynamic (`date_i18n`,
-  `get_bloginfo`). No link columns, no socials, no invented address — Ft2 is
-  deliberately an afterthought line; anything more belongs to a future amend.
+- A centred policy navigation row links to `/code-of-conduct/` and
+  `/terms-and-conditions/`, followed by © year + site title, both dynamic
+  (`date_i18n`, `get_bloginfo`). Policy links moved here 2026-09-18.
 - Band · the `flood` gradient (its footer allowance) with `md` padding.
   Text is `accent-ink` Jost `sm`; contrast at the gradient's magenta end
   ≈ 4.75:1 — passes AA for small text.
@@ -175,8 +174,8 @@ Ft2 single-line footer over the flood band from Signature moves.
   100svh` with `main` growing, so on short pages (404, Code of Conduct) the
   band meets the viewport bottom instead of floating above bare paper.
 - By filename, `parts/footer.html` overrides the parent Twenty Twenty-Five
-  footer sitewide. Verified desktop / 375 / 320 (emulated): no horizontal
-  scroll, single line throughout.
+  footer sitewide. The original copyright-only version was verified desktop /
+  375 / 320 (emulated); the policy navigation uses wrapping links for narrow widths.
 
 ## Buttons (locked 2026-07-26)
 

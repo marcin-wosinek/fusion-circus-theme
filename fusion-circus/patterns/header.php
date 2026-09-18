@@ -4,7 +4,7 @@
  * Slug: fusion-circus/header
  * Categories: header
  * Block Types: core/template-part/header
- * Description: Site header — round badge splitting the nav row (3 left, 2 right) over the flood gradient band.
+ * Description: Site header — round badge splitting the nav row over the flood gradient band.
  */
 ?>
 <!-- wp:group {"align":"full","gradient":"flood","className":"fc-header","style":{"spacing":{"padding":{"top":"var:preset|spacing|xs","bottom":"var:preset|spacing|xs","left":"var:preset|spacing|md","right":"var:preset|spacing|md"},"blockGap":"var:preset|spacing|lg"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"}} -->
@@ -22,7 +22,6 @@
 
 	<!-- wp:navigation {"overlayMenu":"never","textColor":"accent-ink","fontFamily":"body","fontSize":"md","className":"fc-header__nav fc-header__nav--right","ariaLabel":"<?php esc_attr_e( 'Secondary', 'fusion-circus' ); ?>","style":{"spacing":{"blockGap":"var:preset|spacing|sm"}},"layout":{"type":"flex","justifyContent":"left","flexWrap":"wrap"}} -->
 		<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Collaborations', 'fusion-circus' ); ?>","url":"<?php echo esc_url( home_url( '/collaborations/' ) ); ?>"} /-->
-		<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Code of Conduct', 'fusion-circus' ); ?>","url":"<?php echo esc_url( home_url( '/code-of-conduct/' ) ); ?>"} /-->
 	<!-- /wp:navigation -->
 
 </div>
